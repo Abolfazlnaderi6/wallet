@@ -1,0 +1,208 @@
+:root {
+    --mobile-width: 370px;
+    --mobile-height: 560px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    height: 100vh;
+    padding: 10px;
+    background-image: linear-gradient(to bottom right, #848faf, #515b7e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  
+    .main-container {
+      position: relative;
+      width: var(--mobile-width);
+      height: var(--mobile-height);
+      background: #3f496c;
+      font-family: 'Poppins';
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  
+      .menu {
+        svg {
+          position: absolute;
+          top: 10px;
+          left: 20px;
+          z-index: 1;
+          color: white;
+          cursor: pointer;
+        }
+      }
+  
+      .wallet-amount {
+        position: relative;
+        padding: 30px;
+        color: white;
+        background-image: linear-gradient(to right, #2e0b78, #850642);
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 10px 5px -5px rgba(42, 9, 94, 0.5);
+  
+        svg {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          border-radius: 0 0 10px 10px;
+  
+          .wave {
+            fill-opacity: 0.1;
+            margin: 0;
+          }
+        }
+  
+        h3 {
+          margin-bottom: 10px;
+          text-transform: uppercase;
+          font-size: 1em;
+          font-weight: bold;
+        }
+  
+        .mojoodi-text {
+          font-size: 2.5em;
+          font-weight: bold;
+          line-height: 0;
+  
+          &::before {
+            content: '$';
+            font-size: 0.9em;
+          }
+  
+          &::after {
+            content: '. ' attr(data-dec);
+            font-size: 0.9em;
+          }
+        }
+  
+        .increment {
+          font-size: 0.9em;
+          font-weight: 500;
+          line-height: 0;
+  
+          &::before {
+            content: "+";
+          }
+  
+          &::after {
+            content: " ";
+          }
+        }
+  
+        .action-btn {
+          position: absolute;
+          background-color: white;
+          bottom: 0;
+          right: 30px;
+          width: 45px;
+          height: 45px;
+          border: none;
+          border-radius: 50%;
+          transform: translateY(50%);
+          z-index: 1;
+          cursor: pointer;
+  
+          svg {
+            position: relative;
+            color: #2e0b78;
+          }
+        }
+      }
+  
+      .wallet-details {
+        display: grid;
+        color: white;
+        padding: 1.5em 3em;
+        grid-template-areas:
+          "title title button"
+          "details details details";
+  
+        h2 {
+          grid-area: title;
+          font-weight: 300;
+          line-height: 0;
+        }
+  
+        .amount {
+          grid-area: details;
+          color: #bbb;
+          font-size: 0.85em;
+          line-height: 0;
+  
+          &::before {
+            content: "$";
+          }
+  
+          &::after {
+            content: "↑";
+            color: #90e69d;
+          }
+        }
+  
+        .add-coin {
+          grid-area: button;
+          color: #82c4ea;
+          background-color: transparent;
+          text-transform: uppercase;
+          font-size: 0.9em;
+          font-weight: 600;
+          border: none;
+          cursor: pointer;
+          text-align: right;
+        }
+      }
+  
+      .cryptos {
+        color: white;
+        padding: 0 20px;
+  
+        .item {
+          display: grid;
+          margin: 10px 0;
+          background-image: linear-gradient(to right, #7784b0, #384162);
+          grid-template-columns: 1fr 1fr;
+          padding: 15px;
+          border-radius: 10px;
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+          cursor: pointer;
+  
+          .name {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+  
+            img {
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+            }
+  
+            h4 {
+              margin: 0;
+            }
+          }
+  
+          .price {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+  
+            .value {
+              margin: 0;
+              font-size: 1em;
+            }
+  
+            .amount {
+              margin: 5px 0 0 0;
+              color: #bbb;
+              font-size: 0.85em;
+            }
+          }
+        }
+      }
+    }
+  }

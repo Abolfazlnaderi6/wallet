@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wallet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="scss/style.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots"
+                viewBox="0 0 16 16">
+                <path
+                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+            </svg>
+        </div>
+        <div class="wallet-amount">
+            <h3>wallet</h3>
+        </br>
+            <p class="mojoodi-text" dec="27">0</p>
+        </br>
+            <p class="increment">7,075.93 (14%)</p>
+            <button class="action-btn" id="bardasht-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-up" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5" />
+                </svg>
+            </button>
+        </div>
+        <div class="wallet-details">
+            <h2>My Wallet</h2>
+            <p class="amount">7,075.93 (14%)</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">ADD COIN</button>
+        </div>
+        <div class="cryptos">
+            <div class="item BTC">
+              <div class="name">
+                  <img src="images/Bitcoin.webp" alt="Bitcoin">
+                <h4>BTC</h4>
+              </div>
+              <div class="price">
+                  <p class="value">$66437.1</p>
+                  <p class="amount">0.42</p>
+                </div>
+            </div>
+            
+            <div class="item ETH">
+                <div class="name">
+                <img src="images/Eth-diamond-rainbow.png" alt="Ethereum">
+                <h4>ETH</h4>
+            </div>
+              <div class="price">
+                <p class="value">$3218.3</p>
+                <p class="amount">0.42</p>
+              </div>
+            </div>
+            
+            <div class="item SOL">
+                <div class="name">
+                    <img src="images/Solana_logo.png" alt="Solana">
+                    <h4>SOL</h4>
+                </div>
+                <div class="price">
+                    <p class="value">$66437.1</p>
+                    <p class="amount">0.42</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">مبلغ وارد کنید</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">واریز</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">برداشت</label>
+                    <input type="text" class="form-control" id="bardasht-input">
+                  </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">BUY</button>
+              <button type="button" class="btn btn-primary">SALE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>
